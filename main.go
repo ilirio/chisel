@@ -172,7 +172,7 @@ func server(args []string) {
 	config := &chserver.Config{}
 	flags.StringVar(&config.KeySeed, "key", "", "")
 	flags.StringVar(&config.AuthFile, "authfile", "", "")
-	flags.StringVar(&config.Auth, "auth", "", "")
+	flags.StringVar(&config.Auth, "auth", os.Getenv("AUTH"), "")
 	flags.DurationVar(&config.KeepAlive, "keepalive", 25*time.Second, "")
 	flags.StringVar(&config.Proxy, "proxy", "", "")
 	flags.StringVar(&config.Proxy, "backend", "", "")
