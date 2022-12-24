@@ -421,8 +421,10 @@ func client(args []string) {
 	config.Server = args[0]
 	config.Remotes = args[1:]
 	//default auth
+	log.Printf("adasd")
 	if config.Auth == "" {
 		config.Auth = os.Getenv("AUTH")
+		log.Printf(os.Getenv("AUTH"))
 	}
 	//move hostname onto headers
 	if *hostname != "" {
