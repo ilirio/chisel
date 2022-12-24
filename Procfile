@@ -1,1 +1,1 @@
-web: ./bin/chisel
+web: bin/chisel
