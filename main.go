@@ -208,7 +208,7 @@ func server(args []string) {
 		*port = os.Getenv("PORT")
 	}
 	if *port == "" {
-		*port = "8081"
+		*port = "8000"
 	}
 	if config.KeySeed == "" {
 		config.KeySeed = os.Getenv("CHISEL_KEY")
