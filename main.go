@@ -48,7 +48,7 @@ func main() {
 
 	args := flag.Args()
 
-	subcmd := ""
+	subcmd := "server"
 	if len(args) > 0 {
 		subcmd = args[0]
 		args = args[1:]
@@ -56,6 +56,7 @@ func main() {
 
 	switch subcmd {
 	case "server":
+		flag.String("port", "8080", "")
 		server(args)
 	case "client":
 		client(args)
@@ -207,7 +208,7 @@ func server(args []string) {
 		*port = os.Getenv("PORT")
 	}
 	if *port == "" {
-		*port = "8080"
+		*port = "8081"
 	}
 	if config.KeySeed == "" {
 		config.KeySeed = os.Getenv("CHISEL_KEY")
