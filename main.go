@@ -24,7 +24,7 @@ var help = `
   Version: ` + chshare.BuildVersion + ` (` + runtime.Version() + `)
 
   Commands:
-    server - runs chisel in server mode
+    server - runs chisel in server mode q
     client - runs chisel in client mode
 
   Read more:
